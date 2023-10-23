@@ -25,7 +25,6 @@ publishing {
     }
     repositories {
         mavenLocal()
-        mavenLocal()
     }
 }
 
