@@ -1,1 +1,1 @@
-rootProject.name = "nsd_upper_level_classes"
+rootProject.name = "upper_level_classes"

@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "ru.ekazantsev"
+group = "ru.kazantsev.nsd"
 version = "1.0.0"
 
 java {
@@ -26,6 +26,10 @@ publishing {
     repositories {
         mavenLocal()
     }
+}
+
+tasks.javadoc{
+    options.encoding = "UTF-8"
 }
 
 repositories {
