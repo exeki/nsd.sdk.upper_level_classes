@@ -17,7 +17,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/exeki/nsd.sdk.global_variables")
+            url = uri("https://maven.pkg.github.com/exeki/nsd.sdk.upper_level_classes")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
