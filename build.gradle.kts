@@ -14,18 +14,20 @@ java {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/exeki/nsd.sdk.global_variables")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
     publications {
         create<MavenPublication>("maven") {
             from(components["java"])
-//            pom {
-//                groupId = project.group.toString()
-//                artifactId = project.name
-//                version = project.version.toString()
-//            }
         }
-    }
-    repositories {
-        mavenLocal()
     }
 }
 
