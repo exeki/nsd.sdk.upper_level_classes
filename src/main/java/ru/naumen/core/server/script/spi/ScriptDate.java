@@ -9,6 +9,7 @@ abstract public class ScriptDate extends Date {
     abstract public int hashCode();
 
     abstract public void setDate(int date);
+
     abstract public void setHours(int hours);
 
     abstract public void setMinutes(int minutes);
