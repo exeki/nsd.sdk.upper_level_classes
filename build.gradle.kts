@@ -34,7 +34,6 @@ tasks.javadoc {
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 dependencies {
