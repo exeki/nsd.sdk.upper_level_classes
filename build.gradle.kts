@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.1.2"
+version = "1.1.3"
 
 java {
     withSourcesJar()
@@ -37,7 +37,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.slf4j:slf4j-api:2.0.16")
+    api("org.slf4j:slf4j-api:2.0.16")
     api("com.google.code.findbugs:jsr305:3.0.2")
     api("javax.activation:javax.activation-api:1.2.0")
     api("org.springframework:spring-web:6.1.5")
