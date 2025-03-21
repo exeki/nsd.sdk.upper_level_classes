@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.1.3"
+version = "1.1.4"
 
 java {
     withSourcesJar()
@@ -46,7 +46,7 @@ dependencies {
     api("com.google.code.gson:gson:2.10.1")
     api("com.google.guava:guava:33.1.0-jre")
     api("org.gwtproject:gwt-user:2.10.0")
-    api("jakarta.servlet:jakarta.servlet-api:4.0.2")
+    implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
     api("org.apache.httpcomponents.client5:httpclient5:5.3")
 
     //Мне говорили что его когда нибудь выпилят из СД
