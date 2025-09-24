@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.2"
+version = "1.2.0"
 
 java {
     withSourcesJar()
@@ -28,8 +28,15 @@ publishing {
     }
 }
 
-tasks.javadoc {
-    options.encoding = "UTF-8"
+
+tasks {
+    javadoc {
+        options.encoding = "UTF-8"
+    }
+    compileJava {
+        targetCompatibility = JavaVersion.VERSION_21.majorVersion
+        sourceCompatibility = JavaVersion.VERSION_21.majorVersion
+    }
 }
 
 repositories {
