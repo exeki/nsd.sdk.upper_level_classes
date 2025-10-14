@@ -1,25 +1,25 @@
 package ru.naumen.metainfo.shared;
 
-import ru.naumen.core.shared.HasClone;
-
 import java.io.Serializable;
 
-public interface IClassFqn extends IClassFqnWrapper, Cloneable, Serializable, Fqn, HasClone {
+import ru.naumen.core.shared.HasClone;
+
+public interface IClassFqn extends IClassFqnWrapper, CoreClassFqn, Cloneable, Serializable, Fqn, HasClone {
     IClassFqn fqnOfClass();
 
-    boolean isCase();
+    default boolean isCase() {
+        return !this.isClass();
+    }
 
-    boolean isCaseOf(IClassFqn var1);
+    boolean isCaseOf(CoreClassFqn other);
 
-    boolean isClass();
-
-    boolean isClassOf(IClassFqn var1);
+    boolean isClassOf(CoreClassFqn other);
 
     /**
      * @deprecated
      */
     @Deprecated
-    boolean isSomeClass(IClassFqn var1);
+    boolean isSomeClass(IClassFqn other);
 
-    boolean isSameClass(IClassFqn var1);
+    boolean isSameClass(CoreClassFqn other);
 }
