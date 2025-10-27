@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.3"
+version = "1.4"
 
 java {
     withSourcesJar()
