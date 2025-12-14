@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.4.1.1"
+version = "1.4.1.2"
 
 java {
     withSourcesJar()
@@ -132,13 +132,16 @@ dependencies {
     // Jackson Dataformat
     api("com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.12.6")
 
-    // Hibernate Core
-    api("org.hibernate:hibernate-core:4.3.10.Final")
-    // Hibernate Commons Annotations
-    api("org.hibernate.common:hibernate-commons-annotations:4.0.5.Final")
-    // Hibernate EHCache
-    api("org.hibernate:hibernate-ehcache:4.3.11.Final")
-    // JPA 2.1 API
-    api("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final")
+
+    // Hibernate Core 6.x
+    api("org.hibernate.orm:hibernate-core:6.4.4.Final")
+
+    // JPA 3.1 API (в Hibernate 6 используется JPA 3.1)
+    api("jakarta.persistence:jakarta.persistence-api:3.1.0")
+
+    // Для кэширования (если нужно)
+    api("org.hibernate.orm:hibernate-jcache:6.4.4.Final")
+    api("org.ehcache:ehcache:3.10.8")
+
 }
 
