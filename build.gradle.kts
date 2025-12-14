@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsd.sdk"
-version = "1.4.1"
+version = "1.4.1.1"
 
 java {
     withSourcesJar()
@@ -133,12 +133,12 @@ dependencies {
     api("com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.12.6")
 
     // Hibernate Core
-    implementation("org.hibernate:hibernate-core:4.3.10.Final")
+    api("org.hibernate:hibernate-core:4.3.10.Final")
     // Hibernate Commons Annotations
-    implementation("org.hibernate.common:hibernate-commons-annotations:4.0.5.Final")
+    api("org.hibernate.common:hibernate-commons-annotations:4.0.5.Final")
     // Hibernate EHCache
-    implementation("org.hibernate:hibernate-ehcache:4.3.11.Final")
+    api("org.hibernate:hibernate-ehcache:4.3.11.Final")
     // JPA 2.1 API
-    implementation("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final")
+    api("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final")
 }
 
