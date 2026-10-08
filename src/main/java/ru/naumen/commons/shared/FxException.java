@@ -1,8 +1,9 @@
 package ru.naumen.commons.shared;
 
+import java.util.HashMap;
 import java.util.Map;
 
-abstract public class FxException extends RuntimeException implements IReadableException, ILocalizedException {
+ public class FxException extends RuntimeException implements IReadableException, ILocalizedException {
 
     public FxException() {
         super("text");
@@ -56,23 +57,40 @@ abstract public class FxException extends RuntimeException implements IReadableE
         super("text");
     }
 
-    abstract public String getDetails();
+     public String getDetails() {
+        return "";
+     }
 
-    abstract public String getUiMessage();
+     public String getUiMessage(){
+         return "";
+     }
 
-    abstract public boolean isAlreadyLogged();
+     public boolean isAlreadyLogged(){
+         return false;
+     }
 
-    abstract public boolean isReadable();
+     public boolean isReadable(){
+         return false;
+     }
 
-    abstract public void setAlreadyLogged();
+     public void setAlreadyLogged(){
+     }
 
-    abstract public Map<String, String> getLocalizedMessages();
+     public Map<String, String> getLocalizedMessages(){
+         return new HashMap<>();
+     }
 
-    abstract public void setLocalizedMessages(Map<String, String> localizedMessages);
+     public void setLocalizedMessages(Map<String, String> localizedMessages){
+     }
 
-    abstract public String getLocalizedMessage(String locale) ;
+     public String getLocalizedMessage(String locale) {
+         return "";
+     }
 
-    abstract public void setLocalizedMessage(String locale, String message);
+     public void setLocalizedMessage(String locale, String message){
+     }
 
-    abstract public boolean isLocalized();
+     public boolean isLocalized(){
+         return false;
+     }
 }

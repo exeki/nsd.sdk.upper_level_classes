@@ -3,8 +3,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "ru.kazantsev.nsd.sdk"
-version = "1.5.0"
+group = "ru.kazantsev.nsmp.sdk"
+version = "1.6.0"
 
 java {
     withSourcesJar()
