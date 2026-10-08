@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ru.kazantsev.nsmp.sdk"
-version = "1.6.1"
+version = "1.6.2"
 
 java {
     withSourcesJar()
@@ -14,7 +14,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/exeki/nsd.sdk.upper_level_classes")
+            url = uri("https://maven.pkg.github.com/exeki/nsmp.sdk.upper_level_classes")
             credentials {
                 username = System.getenv("GITHUB_USERNAME")
                 password = System.getenv("GITHUB_TOKEN")
